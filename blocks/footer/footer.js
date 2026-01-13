@@ -16,5 +16,8 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
+  footer.querySelector('.sub-menu-list').remove();
+  footer.querySelector('.arrow-icon').remove();
+
   block.append(footer);
 }

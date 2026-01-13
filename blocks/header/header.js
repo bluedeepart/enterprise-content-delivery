@@ -61,7 +61,7 @@ export default async function decorate(block) {
   nav.setAttribute('aria-expanded', 'false');
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const classes = ['brand', 'sections', 'tools'];
+  const classes = ['brand', 'sections'];
   classes.forEach((c, i) => {
     const section = nav.children[0].children[i];
     if (section) section.className = `nav-${c}`;
@@ -75,9 +75,7 @@ export default async function decorate(block) {
   }
 
   const navSections = nav.querySelector('.nav-sections');
-  const navTools = nav.querySelector('.nav-tools');
   if (navSections) {
-    navSections.appendChild(navTools);
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       // if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       navSection.addEventListener('click', () => {
