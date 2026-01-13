@@ -21,8 +21,15 @@
   z-index: 1;
 }
 
-@media (width >= 992px) {
-  .hero-container .button-container {
-    margin-top: 2rem;
-  }
+.hero-wrapper p {
+  color: inherit;
+}
+
+.hero-wrapper .button.secondary{
+  border-color: #fff;
+  color: #fff;
+}
+
+.hero {
+  max-width: 960px;
 }

@@ -20,7 +20,7 @@
   grid-template-columns: 2fr 1.2fr 1.2fr;
   grid-template-areas:
     "about menu legal"
-    "copyright copyright copyright";
+    "about menu copyright";
 }
 
 .footer > div > .section:first-child {
@@ -38,8 +38,7 @@
 .footer > div > .section:last-child {
   grid-area: copyright;
   font-size: 14px;
-  padding-top: 2rem;
-  border-top: 1px solid var(--color-border-default);
+  align-self: end;
 }
 
 footer h4 {

@@ -8,7 +8,7 @@
   /* ===========================
      BRAND COLORS
      =========================== */
-  --color-brand-primary: #00BBC9;
+  --color-brand-primary: #00bbc9;
   --color-brand-secondary: #202022;
   --color-brand-accent: #f4f4f4;
 
@@ -20,9 +20,9 @@
   --color-border-default: #e5e5e5;
   --color-text-primary: #111;
   --color-text-secondary: #878787;
-  --color-text-muted: #CACACA;
+  --color-text-muted: #cacaca;
   --color-link-default: var(--color-brand-primary);
-  --color-link-hover: #00747C;
+  --color-link-hover: #00747c;
 
   /* ===========================
      STATUS (optional)
@@ -35,8 +35,8 @@
      TYPOGRAPHY — DESKTOP
      =========================== */
 
-  --font-size-h1: 2.4rem;
-  --font-size-h2: 1.8rem;
+  --font-size-h1: 4rem;
+  --font-size-h2: 3rem;
   --font-size-h3: 1.3rem;
   --font-size-h4: 1.05rem;
   --font-size-h5: 0.95rem;
@@ -132,22 +132,24 @@ h6 {
   line-height: var(--line-height-heading);
   margin-bottom: var(--space-md);
   font-weight: 600;
+  margin-top: var(--space-md);
 }
 
 h1 {
   font-size: var(--font-size-h1);
-  font-weight: 700;
+  font-weight: 400;
+  margin: 0;
 }
 
 h2 {
   font-size: var(--font-size-h2);
+  font-weight: lighter;
 }
 
 h3 {
   font-size: var(--font-size-h3);
   line-height: 1.3;
 }
-
 
 h4 {
   font-size: var(--font-size-h4);
@@ -180,7 +182,7 @@ h6 {
 
 p {
   margin: 0 0 var(--space-sm);
-  max-width: 70ch;
+  color: var(--color-text-secondary);
 }
 
 strong {

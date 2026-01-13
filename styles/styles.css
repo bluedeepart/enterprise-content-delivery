@@ -49,7 +49,7 @@ button {
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
   font-family: var(--body-font-family);
-  font-weight: 600;
+  font-weight: bold;
   font-style: normal;
   border-radius: 0.5rem;
   background: transparent;
@@ -84,7 +84,7 @@ button.primary:hover {
 
 a.button.secondary,
 button.secondary {
-  background-color: #fff;
+  background-color: transparent;
   border-color: var(--color-brand-primary);
   color: var(--color-brand-primary);
 }
@@ -163,17 +163,25 @@ main > .section:first-of-type {
   margin-top: 0;
 }
 
-@media (width > 992px) {
+@media (width >= 992px) {
   header .header,
   main > .section > div,
   footer .footer {
     padding: 0 32px;
   }
+
+  .button-container {
+    margin-top: 2rem;
+  }
 }
 
-@media (width < 991px) {
+@media (width <= 991px) {
   main {
     padding-top: 84px;
+  }
+
+  .button-container {
+    margin-top: 1rem;
   }
 }
 
@@ -192,4 +200,10 @@ main .section.highlight {
 
 .text-white {
   color: #fff;
+}
+
+/* connect-section */
+.connect-section {
+  background-color: var(--color-bg-muted);
+  text-align: center;
 }
