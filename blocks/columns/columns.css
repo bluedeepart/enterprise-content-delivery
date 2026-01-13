@@ -1,6 +1,8 @@
+/* stylelint-disable no-descending-specificity */
 .columns > div {
   display: flex;
   flex-direction: column;
+  gap: var(--space-md);
 }
 
 .columns img {
@@ -9,6 +11,22 @@
 
 .columns > div > div {
   order: 1;
+  background: var(--color-bg-muted);
+  border: 1px solid var(--color-border-default);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.background-gray .columns > div > div {
+  background: var(--color-bg-default);
+}
+
+.columns > div > div:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-brand-primary);
 }
 
 .columns > div > .columns-img-col {
@@ -21,13 +39,105 @@
 
 @media (width >= 992px) {
   .columns > div {
-    align-items: center;
     flex-direction: unset;
-    gap: 24px;
   }
 
   .columns > div > div {
     flex: 1;
     order: unset;
   }
+}
+
+.columns h3 {
+  margin-top: 0;
+  color: var(--color-text-primary);
+}
+
+.columns ul {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.columns li {
+  margin-bottom: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.columns-wrapper ~ .columns-wrapper {
+  margin-top: var(--space-md);
+}
+
+/* layers */
+.columns-wrapper:has(.layers) {
+  margin-bottom: 2rem;
+}
+
+.columns.layers {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  counter-reset: layer;
+  gap: var(--space-md);
+}
+
+.columns.layers::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-border-default);
+}
+
+.columns.layers > div {
+  position: relative;
+  padding-left: 64px;
+}
+
+.columns.layers > div > div {
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 5%);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.columns.layers > div > div:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+}
+
+.columns.layers > div::before {
+  content: counter(layer);
+  counter-increment: layer;
+  position: absolute;
+  left: 0;
+  top: 1.25rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-bg-default);
+  border: 2px solid var(--color-brand-primary);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: var(--color-brand-primary);
+  z-index: 2;
+}
+
+.columns.layers h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  color: var(--color-text-primary);
+}
+
+.columns.layers p {
+  margin-top: 0.5rem;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
 }

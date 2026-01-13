@@ -180,6 +180,10 @@ main > .section:first-of-type {
     padding-top: 84px;
   }
 
+  main > .section{
+    padding: 40px 0;
+  }
+
   .button-container {
     margin-top: 1rem;
   }
@@ -203,7 +207,16 @@ main .section.highlight {
 }
 
 /* connect-section */
+.text-center,
 .connect-section {
-  background-color: var(--color-bg-muted);
   text-align: center;
+}
+
+.background-gray{
+  background-color: var(--color-bg-muted);
+}
+
+.connect-section,
+.background-theme {
+  background-color: rgb(var(--color-brand-primary-rgb) / 10%);
 }

@@ -9,6 +9,7 @@
      BRAND COLORS
      =========================== */
   --color-brand-primary: #00bbc9;
+  --color-brand-primary-rgb: 0 187 201;
   --color-brand-secondary: #202022;
   --color-brand-accent: #f4f4f4;
 
@@ -144,6 +145,7 @@ h1 {
 h2 {
   font-size: var(--font-size-h2);
   font-weight: lighter;
+  margin-top: 0;
 }
 
 h3 {
@@ -218,7 +220,6 @@ ol {
 }
 
 li {
-  margin-bottom: 0.4rem;
   color: var(--color-text-secondary);
 }
 
