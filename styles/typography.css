@@ -126,7 +126,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-text-primary);
+  color: inherit;
   font-family: var(--heading-font-family);
   scroll-margin: 40px;
   line-height: var(--line-height-heading);
@@ -180,7 +180,6 @@ h6 {
 
 p {
   margin: 0 0 var(--space-sm);
-  color: var(--color-text-secondary);
   max-width: 70ch;
 }
 
