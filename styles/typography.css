@@ -139,7 +139,7 @@ h6 {
 h1 {
   font-size: var(--font-size-h1);
   font-weight: 400;
-  margin: 0;
+  margin-top: 0;
 }
 
 h2 {
@@ -176,6 +176,15 @@ h4,
 h5,
 h6 {
   margin-bottom: var(--space-xs);
+}
+
+h1:has(+ h2) {
+  margin-bottom: 0;
+}
+
+h2 ~ h2 {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
 }
 
 /* ===========================

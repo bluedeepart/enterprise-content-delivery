@@ -1,4 +1,9 @@
 /* stylelint-disable no-descending-specificity */
+.columns {
+  display: grid;
+  row-gap: var(--space-md);
+}
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -102,14 +107,12 @@
   padding: 1.5rem 1.5rem 1.5rem 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 6px 18px rgb(0 0 0 / 5%);
-  transition:
-    transform 220ms ease,
-    box-shadow 220ms ease;
 }
 
 .columns.layers > div > div:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+  border-color: var(--color-brand-primary);
 }
 
 .columns.layers > div::before {
