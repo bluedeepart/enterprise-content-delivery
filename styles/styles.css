@@ -76,6 +76,12 @@ button.primary {
   color: #fff;
 }
 
+a.button.primary:hover,
+button.primary:hover {
+  background-color: var(--color-bg-default);
+  color: var(--color-brand-primary);
+}
+
 a.button.secondary,
 button.secondary {
   background-color: #fff;
@@ -83,10 +89,11 @@ button.secondary {
   color: var(--color-brand-primary);
 }
 
-a.button.primary:hover,
-button.primary:hover {
-  background-color: var(--color-bg-default);
-  color: var(--color-brand-primary);
+a.button.secondary:hover,
+button.secondary:hover {
+  background-color: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+  color: #fff;
 }
 
 .button svg {
@@ -112,6 +119,14 @@ a.link-button::after {
 
 a.link-button:hover::after {
   transform: translateX(4px);
+}
+
+.button-container {
+  display: inline-block;
+}
+
+.button-container:has(~ .button-container) {
+  margin-right: 1rem;
 }
 
 main img {
@@ -149,7 +164,9 @@ main > .section:first-of-type {
 }
 
 @media (width > 992px) {
-  main > .section > div {
+  header .header,
+  main > .section > div,
+  footer .footer {
     padding: 0 32px;
   }
 }
@@ -171,4 +188,8 @@ main .section.highlight {
 /* ---------- Narrow content helper ---------- */
 .section.narrow > div {
   max-width: 960px;
+}
+
+.text-white {
+  color: #fff;
 }
