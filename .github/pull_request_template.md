@@ -3,5 +3,5 @@ Please always provide the [GitHub issue(s)](../issues) your PR is for, as well a
 Fix #<gh-issue-id>
 
 Test URLs:
-- Before: https://main--enterprise-content-delivery--bluedeepart.aem.live/
-- After: https://<branch>--enterprise-content-delivery--bluedeepart.aem.live/
+- Before: https://main--enterprise-content-delivery--bluedeepart.aem.page/
+- After: https://<branch>--enterprise-content-delivery--bluedeepart.aem.page/
