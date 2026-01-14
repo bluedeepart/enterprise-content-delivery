@@ -78,8 +78,9 @@ button.primary {
 
 a.button.primary:hover,
 button.primary:hover {
-  background-color: var(--color-bg-default);
-  color: var(--color-brand-primary);
+  background-color: var(--color-link-hover);
+  border-color: var(--color-link-hover);
+  color: var(--color-brand-accent);
 }
 
 a.button.secondary,
@@ -91,8 +92,8 @@ button.secondary {
 
 a.button.secondary:hover,
 button.secondary:hover {
-  background-color: var(--color-brand-primary);
-  border-color: var(--color-brand-primary);
+  background-color: var(--color-link-hover);
+  border-color: var(--color-link-hover);
   color: #fff;
 }
 
@@ -155,7 +156,8 @@ header .header,
 main > .section > div,
 footer .footer {
   max-width: var(--content-width);
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 15px;
 }
 
@@ -178,6 +180,10 @@ main > .section:first-of-type {
 @media (width <= 991px) {
   main {
     padding-top: 84px;
+  }
+
+  main > .section{
+    padding: 40px 0;
   }
 
   .button-container {
@@ -203,7 +209,16 @@ main .section.highlight {
 }
 
 /* connect-section */
+.text-center,
 .connect-section {
-  background-color: var(--color-bg-muted);
   text-align: center;
+}
+
+.background-gray{
+  background-color: var(--color-bg-muted);
+}
+
+.connect-section,
+.background-theme {
+  background-color: rgb(var(--color-brand-primary-rgb) / 10%);
 }
