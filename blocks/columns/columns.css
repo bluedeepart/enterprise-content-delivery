@@ -107,6 +107,8 @@
   padding: 1.5rem 1.5rem 1.5rem 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 6px 18px rgb(0 0 0 / 5%);
+  border-left: 4px solid var(--color-brand-primary);
+  padding-left: 1.5rem;
 }
 
 .columns.layers > div > div:hover {
@@ -131,6 +133,10 @@
   font-weight: 700;
   color: var(--color-brand-primary);
   z-index: 2;
+}
+
+.columns.layers.no-numbers > div::before {
+  content: ">";
 }
 
 .columns.layers h3 {

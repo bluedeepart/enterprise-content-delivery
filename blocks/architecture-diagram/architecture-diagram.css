@@ -1,0 +1,54 @@
+.arch-diagram {
+  background: linear-gradient(180deg, var(--color-bg-muted), transparent);
+  border-top: 1px solid var(--color-border-default);
+  border-bottom: 1px solid var(--color-border-default);
+  margin-top: var(--space-lg);
+}
+
+.arch-diagram ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.arch-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.arch-box {
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  background: var(--color-bg-default);
+  border: 2px solid var(--color-border-default);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 5%);
+}
+
+.arch-item.is-active .arch-box {
+  border-color: var(--color-brand-primary);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+}
+
+.arch-arrow {
+  color: var(--color-text-muted);
+  font-size: 1.25rem;
+}
+
+.arch-item:last-child .arch-box {
+  border-style: dashed;
+  opacity: 0.85;
+}
+
+@media (width <=767px) {
+  .architecture-diagram-wrapper {
+    display: none;
+  }
+}

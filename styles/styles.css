@@ -155,7 +155,8 @@ header .header,
 main > .section > div,
 footer .footer {
   max-width: var(--content-width);
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 15px;
 }
 
