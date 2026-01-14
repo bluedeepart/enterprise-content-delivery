@@ -1,0 +1,51 @@
+.nexora-form {
+  margin-top: 1rem;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.form-field input,
+.form-field textarea {
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--color-border-default);
+  font-family: inherit;
+}
+
+@media (width >= 992px) {
+  .section.form-container {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 0;
+    gap: var(--space-md);
+  }
+
+  .section.form-container > div {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.form-error {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--color-error);
+}
